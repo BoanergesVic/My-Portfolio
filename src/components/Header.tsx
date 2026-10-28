@@ -4,26 +4,24 @@ import { nav } from "@/content/site";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-ink/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" aria-label="VIF, home">
+    <header className="site-header">
+      <div className="site-header__inner">
+        <Link href="/" aria-label="VIF, home" className="brand-link">
           <Monogram className="h-8 w-auto" />
+          <span className="brand-link__name">VICTOR FADEYI<span>TECHNOLOGY / CREATIVE</span></span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden gap-8 text-sm md:flex">
+        <nav aria-label="Primary" className="desktop-nav">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href} className="text-dim hover:text-paper">
+            <Link key={item.href} href={item.href}>
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <details className="md:hidden">
-          <summary className="cursor-pointer text-sm">Menu</summary>
-          <nav
-            aria-label="Mobile"
-            className="absolute inset-x-0 top-full flex flex-col gap-4 border-b border-line bg-ink px-6 py-5 text-sm"
-          >
+        <details className="mobile-menu">
+          <summary><span>Menu</span><i aria-hidden="true" /></summary>
+          <nav aria-label="Mobile">
             {nav.map((item) => (
               <Link key={item.href} href={item.href}>
                 {item.label}

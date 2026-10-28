@@ -1,8 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-dim">
-        © {new Date().getFullYear()} Victor Iyanuoluwa Fadeyi
+    <footer className="site-footer">
+      <div className="site-footer__inner">
+        <span className="site-footer__mark">VIF</span>
+        <span>Copyright {new Date().getFullYear()} Victor Iyanuoluwa Fadeyi</span>
+        <a href="#main">Back to top</a>
       </div>
     </footer>
   );

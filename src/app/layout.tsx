@@ -3,6 +3,7 @@ import { Bodoni_Moda, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MotionEffects from "@/components/MotionEffects";
 
 const display = Bodoni_Moda({
   variable: "--font-bodoni",
@@ -17,7 +18,7 @@ const body = Instrument_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "VIF — Victor Iyanuoluwa Fadeyi",
+    default: "VIF - Victor Iyanuoluwa Fadeyi",
     template: "%s | VIF",
   },
   description:
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <Header />
+        <MotionEffects />
         <main id="main" className="flex-1">
           {children}
         </main>
